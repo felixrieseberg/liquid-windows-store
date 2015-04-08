@@ -1,8 +1,10 @@
 <div class="col-1-6">
     <div class="slide">
         <figure class="media">
-            <div class="media-img ratio-1-1">
-                {{#link-to "pdp" app}}<img class="cli_image" src={{app.ImageSource}}>{{/link-to}}
+            <div class="media-img ratio-1-1 cli_image_container">
+                {{#link-to "pdp" app}}
+                    <img class="cli_image" src={{app.ImageSource}} data-app-id={{app.id}}>
+                {{/link-to}}
             </div>
             <figcaption class="media-caption">
                 <h4 class="media-header media-header-clamp-2">

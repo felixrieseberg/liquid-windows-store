@@ -119,10 +119,12 @@
                     </div>
                 </div>
                 </header>
-                <div class="srv_drillin-results row" data-bi-area="DrillResults" data-bi-view="12rowX6col" data-bi-source="DisplayCatalog">
-                    {{#each app in model}}
-                        {{partial "partials/app" itemController="app"}}
-                    {{/each}}
+                <div class="srv_drillin-results row appicons" data-bi-area="DrillResults" data-bi-view="12rowX6col" data-bi-source="DisplayCatalog">
+                    {{#liquid-with model as |currentModel|}}
+                        {{#each currentModel as |app|}}
+                            {{partial "partials/app" itemController="app"}}
+                        {{/each}}
+                    {{/liquid-with}}
                 </div>
                 <nav>
                     <ul class="srv_pagingBar pagination">

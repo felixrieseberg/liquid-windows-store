@@ -1,12 +1,38 @@
 export default function () {
+    var duration = 300;
+
     this.transition(
         this.fromRoute('store'),
         this.toRoute('pdp'),
-        this.use('toRight'),
-        this.reverse('toLeft')
+        this.use('explode', {
+            matchBy: 'data-app-id',
+            use: ['flyTo', {
+                duration
+            }]
+        }, {
+            use: ['toLeft', {
+                duration
+            }]
+        }),
+        this.reverse('explode', {
+            matchBy: 'data-app-id',
+            use: ['flyTo', {
+                duration
+            }]
+        }, {
+            use: ['toRight', {
+                duration
+            }]
+        })
     );
+
     this.transition(
-        this.matchSelector('.cli_image'),
-        this.use('toUp')
+        this.childOf('.appicons'),
+        this.use('explode', {
+            matchBy: 'data-app-id',
+            use: ['flyTo', {
+                duration, easing: [250, 15]
+            }]
+        })
     );
 }
