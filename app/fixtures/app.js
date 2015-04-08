@@ -571,7 +571,7 @@ export default [
             "Title": "Disney Checkout Challenge",
             "Type": "App",
             "Usage": { "AggregateTimeSpan": "AllTime", "AverageRating": 3.9, "RatingCount": 43.0, "PlayCount": null, "PurchaseCount": 89.0, "RentalCount": null, "TrialCount": null }
-        },
+        }/*,
         {
             "DisplayPrice": "Free",
             "id": "9WZDNCRDMGKP",
@@ -6512,7 +6512,7 @@ export default [
             "Title": "Spider Solitaire 8",
             "Type": "App",
             "Usage": { "AggregateTimeSpan": "AllTime", "AverageRating": 3.8, "RatingCount": 472.0, "PlayCount": null, "PurchaseCount": 16622.0, "RentalCount": null, "TrialCount": null }
-        }
+        }*/
     ];
 
 /* jshint ignore:start */
