@@ -9,5 +9,9 @@ export default DS.Model.extend({
     Title: DS.attr('string'),
     Type: DS.attr(),
     SlotId: DS.attr('string'),
-    Usage: DS.attr()
+    Usage: DS.attr(),
+
+    ScreenShot: function() {
+		return "https://placehold.it/320x240";
+	}.property()
 });
