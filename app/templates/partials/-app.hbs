@@ -2,9 +2,7 @@
     <div class="slide">
         <figure class="media">
             <div class="media-img ratio-1-1">
-                {{!-- TODO: Link To the App --}}
-                <img class="cli_image" src={{app.ImageSource}}>
-                {{!-- END TODO --}}
+                {{#link-to "pdp" app}}<img class="cli_image" src={{app.ImageSource}}>{{/link-to}}
             </div>
             <figcaption class="media-caption">
                 <h4 class="media-header media-header-clamp-2">
