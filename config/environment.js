@@ -44,6 +44,11 @@ module.exports = function (environment) {
 
     }
 
+    if (environment === 'gh-pages') {
+        ENV.locationType = 'hash';
+        ENV.baseURL = '/liquid-windows-store';
+    }
+
     ENV.contentSecurityPolicy = {
         'default-src': "'none'",
         'script-src': "'self' https://cdn.mxpnl.com", // Allow scripts from https://cdn.mxpnl.com
